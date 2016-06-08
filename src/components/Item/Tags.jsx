@@ -8,7 +8,7 @@ export default React.createClass({
     const {name, type, url, tags} = this.props
 
     return <ul className="tags list--unstyled row row--centered-items">
-      {tags.map(tag =>
+      {tags.sort().map(tag =>
         <li key={tag}>#{tag}</li>
       )}
     </ul>
