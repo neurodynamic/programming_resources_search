@@ -11,7 +11,20 @@ export default React.createClass({
     const {name, type, url, tags} = this.props
 
     return <li>
-      <a href={url}>{name}</a>
+      <div className="type row row--sidelined-items">
+        
+      </div>
+      <div className="link">
+        <a href={url}>{name}</a>
+      </div>
+      <ul className="tags list--unstyled">
+        {this.hashedTags(tags).map(tag =>
+          <li key={tag}>{tag}</li>
+        )}
+      </ul>
     </li>
+  },
+  hashedTags: function (tags) {
+    return tags.map(tag => '#' + tag)
   }
 })

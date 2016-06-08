@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Item from './Item'
+import './Results.sass'
 
 export default React.createClass({
   propTypes: {
@@ -9,7 +10,7 @@ export default React.createClass({
   },
   render: function () {
     return <div className="row row--centered-items">
-      <ul>
+      <ul className="results list--unstyled col">
         {this.results().map(link =>
           <Item {...link} key={link.name}/>
         )}
@@ -31,7 +32,8 @@ export default React.createClass({
     const linkParts = this.linkMatchableParts
     return queryWords.every(function (word) {
       return linkParts(link).find(function (potentialMatch) {
-        return potentialMatch.startsWith(word)
+        return potentialMatch.toLowerCase()
+                .startsWith(word.toLowerCase())
       })
     })
   },
