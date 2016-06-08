@@ -25,6 +25,6 @@ export default React.createClass({
     </main>
   },
   setQuery: function (query) {
-    this.state.query = query
+    this.setState({query: query})
   }
 })

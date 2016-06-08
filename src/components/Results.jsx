@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Item from './Item'
+
 export default React.createClass({
   propTypes: {
     links: React.PropTypes.array,
@@ -8,12 +10,34 @@ export default React.createClass({
   render: function () {
     return <div className="row row--centered-items">
       <ul>
-        {this.props.links.map(link =>
-          <li key={link.name}>
-            <a href={link.url}>{link.name}</a>
-          </li>
+        {this.results().map(link =>
+          <Item {...link} key={link.name}/>
         )}
       </ul>
     </div>
+  },
+  results: function () {
+    if (this.props.query === '') {
+      return this.props.links
+    } else {
+      const isMatch = this.isMatch
+      return this.props.links.filter(function (link) {
+        return isMatch(link)
+      })
+    }
+  },
+  isMatch: function (link) {
+    const queryWords = this.props.query.split(' ')
+    const linkParts = this.linkMatchableParts
+    return queryWords.every(function (word) {
+      return linkParts(link).find(function (potentialMatch) {
+        return potentialMatch.startsWith(word)
+      })
+    })
+  },
+  linkMatchableParts: function (link) {
+    const hashedTags = link.tags.map(tag => '#' + tag)
+    const nameParts = link.name.split(' ')
+    return nameParts.concat(hashedTags)
   }
 })
