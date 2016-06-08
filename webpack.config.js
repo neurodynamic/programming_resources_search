@@ -12,7 +12,8 @@ var config = getConfig({
       'index.html':
         context.defaultTemplate(
           {
-            head: '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">',
+            head: '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">' +
+                  '<script src="https://use.fontawesome.com/ce69380dcd.js"></script>',
             html: '<div id="main-app"></div>',
             title: 'Site Title'
           }

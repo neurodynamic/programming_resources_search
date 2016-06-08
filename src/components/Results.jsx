@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Item from './Item'
+import Item from './Item/Base'
 import './Results.sass'
 
 export default React.createClass({

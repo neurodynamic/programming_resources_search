@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'font-awesome-webpack'
 
 import Main from './components/Main'
 import './app.sass'

@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Tags from './Tags'
+import Icon from './Icon'
+
 export default React.createClass({
   propTypes: {
     name: React.PropTypes.string,
@@ -12,16 +15,14 @@ export default React.createClass({
 
     return <li>
       <div className="type row row--sidelined-items">
-        
+        <Icon type={type} />
+        <div className="col">
+          <div className="link">
+            <a href={url}>{name}</a>
+          </div>
+          <Tags tags={tags} />
+        </div>
       </div>
-      <div className="link">
-        <a href={url}>{name}</a>
-      </div>
-      <ul className="tags list--unstyled">
-        {this.hashedTags(tags).map(tag =>
-          <li key={tag}>{tag}</li>
-        )}
-      </ul>
     </li>
   },
   hashedTags: function (tags) {
