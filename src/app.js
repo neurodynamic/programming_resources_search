@@ -6,6 +6,6 @@ import './app.sass'
 import links from './data/links'
 
 ReactDOM.render(
-  <Main links={links} />,
+  <Main links={links.sort(linkCompare)} />,
   document.getElementById('main-app')
 )

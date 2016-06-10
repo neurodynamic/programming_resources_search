@@ -29,9 +29,17 @@ export default React.createClass({
       return this.shuffleArray(this.props.links)
     } else {
       const isMatch = this.isMatch
-      return this.props.links.filter(function (link) {
+      const results = this.props.links.filter(function (link) {
         return isMatch(link)
       })
+      return results.sort(this.linkCompare)
+    }
+  },
+  linkCompare: function (a, b) {
+    if (a.name.toLowerCase() > b.name.toLowerCase()) {
+      return 1
+    } else {
+      return -1
     }
   },
   shuffleArray: function (array) {

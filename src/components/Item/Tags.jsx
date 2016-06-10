@@ -11,7 +11,6 @@ export default React.createClass({
   },
   render: function () {
     const {name, type, url, tags} = this.props
-    console.log("tags this.props.query:", this.props.query);
 
     return <ul className={this.tagsClasses()}>
       {tags.sort().map(tag =>
