@@ -37,15 +37,16 @@ export default React.createClass({
   isMatch: function (link) {
     const queryWords = this.props.query.split(' ')
     const linkParts = this.linkMatchableParts
-    return queryWords.every(function (word) {
+    return queryWords.every(function (queryWord) {
       return linkParts(link).find(function (potentialMatch) {
         return potentialMatch.toLowerCase()
-                .startsWith(word.toLowerCase())
+                .startsWith(queryWord.toLowerCase())
       })
     })
   },
   linkMatchableParts: function (link) {
     const nameParts = link.name.split(' ')
-    return nameParts.concat(link.tags)
+    const hashlessTags = link.tags.map(function (tag) { return tag.replace('#','') })
+    return nameParts.concat(link.tags).concat(hashlessTags)
   }
 })
