@@ -26,13 +26,22 @@ export default React.createClass({
   },
   results: function () {
     if (this.props.query === '') {
-      return this.props.links
+      return this.shuffleArray(this.props.links)
     } else {
       const isMatch = this.isMatch
       return this.props.links.filter(function (link) {
         return isMatch(link)
       })
     }
+  },
+  shuffleArray: function (array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
   },
   isMatch: function (link) {
     const queryWords = this.props.query.split(' ')
