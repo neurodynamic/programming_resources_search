@@ -1,13 +1,13 @@
 {
-  "name": "coding-resources-search",
+  "name": "programming-resources-search",
   "version": "1.0.0",
-  "description": "coding resources site",
+  "description": "programming resources site",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "NODE_ENV=production webpack",
-    "deploy": "surge -p dist -d DOMAIN.surge.sh",
+    "deploy": "surge -p dist -d programmingresources.surge.sh",
     "yolo": "npm run build && git add . && git commit -m 'build' && git push origin --all && npm run deploy"
   },
   "standard": {

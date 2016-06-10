@@ -2,6 +2,7 @@ import React from 'react'
 
 import Tags from './Tags'
 import Icon from './Icon'
+import './Base.sass'
 
 export default React.createClass({
   propTypes: {
@@ -19,7 +20,10 @@ export default React.createClass({
         <Icon type={type} />
         <div>
           <div className="link">
-            <a href={url} target="_blank">{name}</a>
+            <a href={url} target="_blank">
+              {name}
+              <i className="fa fa-external-link"></i>
+            </a>
           </div>
           <Tags {...this.props} />
         </div>

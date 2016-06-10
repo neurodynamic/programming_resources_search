@@ -16,7 +16,7 @@ export default React.createClass({
   render: function () {
     const { query, links } = this.state
     return <main className="responsive-margin-container">
-      <h1>Coding Resources Search</h1>
+      <h1>Programming Resources Search</h1>
       <Search
         query={query}
         setQuery={this.setQuery}
