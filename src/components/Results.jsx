@@ -6,15 +6,18 @@ import './Results.sass'
 export default React.createClass({
   propTypes: {
     links: React.PropTypes.array,
-    query: React.PropTypes.string
+    query: React.PropTypes.string,
+    setQuery: React.PropTypes.func
   },
   render: function () {
+    const { query, setQuery } = this.props
     return <div className="row row--centered-items">
       <ul className="results list--unstyled col column--left-aligned">
         {this.results().map(link =>
           <Item
             {...link}
-            query={this.props.query}
+            query={query}
+            setQuery={setQuery}
             key={link.name}
             />
         )}

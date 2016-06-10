@@ -19,7 +19,7 @@ export default React.createClass({
         <Icon type={type} />
         <div>
           <div className="link">
-            <a href={url}>{name}</a>
+            <a href={url} target="_blank">{name}</a>
           </div>
           <Tags {...this.props} />
         </div>
