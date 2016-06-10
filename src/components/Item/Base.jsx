@@ -8,19 +8,20 @@ export default React.createClass({
     name: React.PropTypes.string,
     type: React.PropTypes.string,
     url: React.PropTypes.string,
-    tags: React.PropTypes.array
+    tags: React.PropTypes.array,
+    setQuery: React.PropTypes.func
   },
   render: function () {
-    const {name, type, url, tags} = this.props
+    const {name, type, url, tags, setQuery} = this.props
 
     return <li>
-      <div className="type row row--sidelined-items">
+      <div className="type row row--sidelined-items row--collapsed">
         <Icon type={type} />
-        <div className="col">
+        <div>
           <div className="link">
             <a href={url}>{name}</a>
           </div>
-          <Tags tags={tags} />
+          <Tags {...this.props} />
         </div>
       </div>
     </li>

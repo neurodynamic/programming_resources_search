@@ -10,9 +10,13 @@ export default React.createClass({
   },
   render: function () {
     return <div className="row row--centered-items">
-      <ul className="results list--unstyled col">
+      <ul className="results list--unstyled col column--left-aligned">
         {this.results().map(link =>
-          <Item {...link} key={link.name}/>
+          <Item
+            {...link}
+            query={this.props.query}
+            key={link.name}
+            />
         )}
       </ul>
     </div>
@@ -38,8 +42,7 @@ export default React.createClass({
     })
   },
   linkMatchableParts: function (link) {
-    const hashedTags = link.tags.map(tag => '#' + tag)
     const nameParts = link.name.split(' ')
-    return nameParts.concat(hashedTags)
+    return nameParts.concat(link.tags)
   }
 })

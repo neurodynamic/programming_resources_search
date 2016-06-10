@@ -4,10 +4,17 @@ import Tags from './Item/Tags'
 
 export default React.createClass({
   propTypes: {
-    links: React.PropTypes.array
+    links: React.PropTypes.array,
+    query: React.PropTypes.string,
+    setQuery: React.PropTypes.func
   },
   render: function () {
-    return <Tags tags={this.allTags()} />
+    return <Tags
+              tags={this.allTags()}
+              centered={true}
+              query={this.props.query}
+              setQuery={this.props.setQuery}
+              />
   },
   allTags: function () {
     return this.uniq(

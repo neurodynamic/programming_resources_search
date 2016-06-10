@@ -6,6 +6,8 @@ export default React.createClass({
     setQuery: React.PropTypes.func
   },
   render: function () {
+    const { query, setQuery } = this.props
+
     return <div className="row row--centered-items">
       <fieldset>
         <label htmlFor="search">Search</label>
@@ -13,7 +15,8 @@ export default React.createClass({
           type="text"
           id="search"
           name="search"
-          onChange={(e) => this.props.setQuery(e.target.value)}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
           />
       </fieldset>
     </div>

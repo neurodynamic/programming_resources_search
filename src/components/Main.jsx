@@ -14,15 +14,21 @@ export default React.createClass({
     }
   },
   render: function () {
+    const { query, links } = this.state
     return <main>
       <Search
-        query={this.state.query}
+        query={query}
         setQuery={this.setQuery}
         />
-      <TagMenu links={this.props.links} />
-      <Results
-        query={this.state.query}
+      <TagMenu 
         links={this.props.links}
+        query={query}
+        setQuery={this.setQuery}
+        />
+      <Results
+        query={query}
+        links={this.props.links}
+        setQuery={this.setQuery}
         />
     </main>
   },
