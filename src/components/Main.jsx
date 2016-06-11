@@ -17,34 +17,44 @@ export default React.createClass({
     const { query } = this.state
     const links = this.normalizedLinks()
 
-    return <main className='responsive-margin-container'>
-      <h1>Programming Resources Search</h1>
-      <Search
-        query={query}
-        setQuery={this.setQuery}
-        />
-      <TagMenu
-        query={query}
-        links={links}
-        setQuery={this.setQuery}
-        />
-      <Results
-        query={query}
-        links={links}
-        setQuery={this.setQuery}
-        />
+    return <div>
+      <div className='row row--sidelined-items'>
+        <h1>Programming Resources Search</h1>
 
-      <div className="github-link row row--centered-items">
-        <a href="https://github.com/neurodynamic/programming_resources_search">
-          <div>
-            <i className="fa fa-github-alt"></i>
-          </div>
-          <div>
-            Programming Resources Search source code on GitHub
-          </div>
-        </a>
+        <div className='row row--centered-items row--collapsed'>
+          <a className='submit-a-link' href='https://github.com/neurodynamic/programming_resources_search#to-submit-a-link'>
+            <strong>submit a link</strong>
+          </a>
+        </div>
       </div>
-    </main>
+      <main className='responsive-margin-container'>
+        <Search
+          query={query}
+          setQuery={this.setQuery}
+          />
+        <TagMenu
+          query={query}
+          links={links}
+          setQuery={this.setQuery}
+          />
+        <Results
+          query={query}
+          links={links}
+          setQuery={this.setQuery}
+          />
+
+        <div className="github-link row row--centered-items">
+          <a href="https://github.com/neurodynamic/programming_resources_search">
+            <div>
+              <i className="fa fa-github-alt"></i>
+            </div>
+            <div>
+              Programming Resources Search source code on GitHub
+            </div>
+          </a>
+        </div>
+      </main>
+    </div>
   },
   setQuery: function (query) {
     this.setState({query: query})
