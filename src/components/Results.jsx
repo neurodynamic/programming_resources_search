@@ -12,8 +12,8 @@ export default React.createClass({
   },
   render: function () {
     const { query, setQuery } = this.props
-    return <div className="row row--centered-items">
-      <ul className="results list--unstyled col column--left-aligned">
+    return <div className='row row--centered-items'>
+      <ul className='results list--unstyled col column--left-aligned'>
         {this.results().map(link =>
           <Item
             {...link}

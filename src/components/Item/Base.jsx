@@ -13,16 +13,16 @@ export default React.createClass({
     setQuery: React.PropTypes.func
   },
   render: function () {
-    const {name, type, url, tags, setQuery} = this.props
+    const {name, type, url} = this.props
 
     return <li>
-      <div className="type row row--sidelined-items row--collapsed row--no-wrap">
+      <div className='type row row--sidelined-items row--collapsed row--no-wrap'>
         <Icon type={type} />
         <div>
-          <div className="link">
-            <a href={url} target="_blank">
+          <div className='link'>
+            <a href={url} target='_blank'>
               {name}
-              <i className="fa fa-external-link"></i>
+              <i className='fa fa-external-link'></i>
             </a>
           </div>
           <Tags {...this.props} />

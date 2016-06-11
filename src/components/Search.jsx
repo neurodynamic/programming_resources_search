@@ -8,13 +8,13 @@ export default React.createClass({
   render: function () {
     const { query, setQuery } = this.props
 
-    return <div className="row row--centered-items">
+    return <div className='row row--centered-items'>
       <fieldset>
-        <label htmlFor="search">Search</label>
+        <label htmlFor='search'>Search</label>
         <input
-          type="text"
-          id="search"
-          name="search"
+          type='text'
+          id='search'
+          name='search'
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           />

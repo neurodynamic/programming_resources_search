@@ -42,10 +42,10 @@ export default React.createClass({
           setQuery={this.setQuery}
           />
 
-        <div className="github-link row row--centered-items">
-          <a href="https://github.com/neurodynamic/programming_resources_search">
+        <div className='github-link row row--centered-items'>
+          <a href='https://github.com/neurodynamic/programming_resources_search'>
             <div>
-              <i className="fa fa-github-alt"></i>
+              <i className='fa fa-github-alt'></i>
             </div>
             <div>
               Programming Resources Search source code on GitHub

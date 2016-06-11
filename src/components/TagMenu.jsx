@@ -13,7 +13,7 @@ export default React.createClass({
   render: function () {
     return <Tags
               tags={this.allTags()}
-              centered={true}
+              centered
               query={this.props.query}
               setQuery={this.props.setQuery}
               />
