@@ -24,7 +24,7 @@ export default [
     "tags": ["activerecord","associations","ruby"]
   },
   {
-    "name": "jquery cheatsheet",
+    "name": "oscarotero's jquery cheatsheet",
     "type": "cheatsheet",
     "url": "https://oscarotero.com/jquery/",
     "tags": ["jquery","css selectors","javascript"]
@@ -78,16 +78,82 @@ export default [
     "tags": ["regex","regular expressions","ruby"]
   },
   {
-    "name": "name",
-    "type": "video",
-    "url": "url",
-    "tags": ["tag","ruby"]
+    "name": "RSpec tests cheatsheet",
+    "type": "cheatsheet",
+    "url": "https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers",
+    "tags": ["rspec","ruby"]
   },
   {
-    "name": "name",
-    "type": "video",
-    "url": "url",
-    "tags": ["tag","ruby"]
+    "name": "Rails cheatsheet",
+    "type": "cheatsheet",
+    "url": "https://teamgaslight.com/blog/ready-to-try-ruby-an-awesome-rails-cheat-sheet",
+    "tags": ["rails","ruby"]
+  },
+  {
+    "name": "getting started on heroku with ruby tutorial",
+    "type": "interactive tutorial",
+    "url": "https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction",
+    "tags": ["heroku","rails","ruby"]
+  },
+  {
+    "name": "skillcrush's html tags cheatsheet",
+    "type": "cheatsheet",
+    "url": "http://skillcrush.com/wp-content/uploads/2012/06/HTML-Cheatsheet-Skillcrush.pdf",
+    "tags": ["html","tags","elements"]
+  },
+  {
+    "name": "whatwg's html tags cheatsheet",
+    "type": "cheatsheet",
+    "url": "https://developers.whatwg.org/section-index.html#index",
+    "tags": ["html","tags","elements"]
+  },
+  {
+    "name": "overapi's html tags cheatsheet",
+    "type": "cheatsheet",
+    "url": "http://overapi.com/html",
+    "tags": ["html","tags","elements"]
+  },
+  {
+    "name": "learn html and css tutorial",
+    "type": "interactive tutorial",
+    "url": "http://learn.shayhowe.com/html-css/",
+    "tags": ["html","css"]
+  },
+  {
+    "name": "overapi's ruby cheatsheet",
+    "type": "cheatsheet",
+    "url": "http://overapi.com/ruby",
+    "tags": ["ruby"]
+  },
+  {
+    "name": "overapi's jquery cheatsheet",
+    "type": "cheatsheet",
+    "url": "http://overapi.com/jquery",
+    "tags": ["jquery","javascript"]
+  },
+  {
+    "name": "overapi's javascript cheatsheet",
+    "type": "cheatsheet",
+    "url": "http://overapi.com/javascript",
+    "tags": ["javascript"]
+  },
+  {
+    "name": "overapi's git cheatsheet",
+    "type": "cheatsheet",
+    "url": "http://overapi.com/git",
+    "tags": ["git"]
+  },
+  {
+    "name": "basics of object oriented javascript",
+    "type": "blog post",
+    "url": "http://code.tutsplus.com/tutorials/the-basics-of-object-oriented-javascript--net-7670",
+    "tags": ["javascript","oojs"]
+  },
+  {
+    "name": "bash console cheatsheet",
+    "type": "cheatsheet",
+    "url": "http://cli.learncodethehardway.org/bash_cheat_sheet.pdf",
+    "tags": ["bash","console","terminal"]
   },
   // {
   //   "name": "name",
