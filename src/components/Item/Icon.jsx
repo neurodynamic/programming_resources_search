@@ -25,6 +25,8 @@ export default React.createClass({
         return iconClassStart + "rss"
       case "cheatsheet":
         return iconClassStart + "list-alt"
+      case "interactive tutorial":
+        return iconClassStart + "desktop"
 
     }
     return this.props.tags.map(tag => '#' + tag)

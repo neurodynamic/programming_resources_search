@@ -16,7 +16,7 @@ export default React.createClass({
     const {name, type, url, tags, setQuery} = this.props
 
     return <li>
-      <div className="type row row--sidelined-items row--collapsed">
+      <div className="type row row--sidelined-items row--collapsed row--no-wrap">
         <Icon type={type} />
         <div>
           <div className="link">
