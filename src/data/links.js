@@ -185,6 +185,12 @@ export default [
     "url": "https://www.codeschool.com/courses/try-sql",
     "tags": ["sql","databases"]
   },
+  {
+    "name": "complete guide to css flexbox",
+    "type": "blog post",
+    "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+    "tags": ["css","flexbox"]
+  },
   // {
   //   "name": "name",
   //   "type": "video",
