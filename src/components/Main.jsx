@@ -22,7 +22,7 @@ export default React.createClass({
         <h1>Programming Resources Search</h1>
 
         <div className='row row--centered-items row--collapsed'>
-          <a className='submit-a-link' href='https://github.com/neurodynamic/programming_resources_search/issues/new?title=Link+suggestion'>
+          <a className='submit-a-link' href='https://github.com/neurodynamic/programming_resources_search/issues/new?title=Link+suggestion&body=Paste+your+link+suggestion(s)+in+this+box,+then+click+the+"Submit+new+issue"+button.%0A%0A'>
             <strong>submit a link</strong>
           </a>
         </div>
