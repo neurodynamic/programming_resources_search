@@ -2,6 +2,7 @@ import React from 'react'
 
 import Tags from './Item/Tags'
 import uniq from '../utils/array/uniq'
+import flatten from '../utils/array/flatten'
 
 export default React.createClass({
   propTypes: {
@@ -19,15 +20,12 @@ export default React.createClass({
   },
   allTags: function () {
     return uniq(
-      this.flatten(
+      flatten(
         this.tagListsFromLinks()
       )
     )
   },
   tagListsFromLinks: function () {
     return this.props.links.map(function (link) { return link.tags })
-  },
-  flatten: function (array) {
-    return [].concat.apply([], array)
   }
 })

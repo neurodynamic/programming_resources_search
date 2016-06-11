@@ -2,7 +2,7 @@ import React from 'react'
 
 import Item from './Item/Base'
 import './Results.sass'
-import flatten2d from '../utils/array/flatten2d'
+import flatten from '../utils/array/flatten'
 
 export default React.createClass({
   propTypes: {
@@ -44,13 +44,13 @@ export default React.createClass({
     }
   },
   shuffleArray: function (array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1))
+      let temp = array[i]
+      array[i] = array[j]
+      array[j] = temp
     }
-    return array;
+    return array
   },
   isMatch: function (link) {
     const queryWords = this.props.query.split(' ')
@@ -68,7 +68,7 @@ export default React.createClass({
   },
   wordsInTags: function (link) {
     const wordsInEachTag = link.tags.map(this.tagToWords)
-    return flatten2d(wordsInEachTag)
+    return flatten(wordsInEachTag)
   },
   tagToWords (tag) {
     return tag.replace('#', '').replace('-', ' ').split(' ')

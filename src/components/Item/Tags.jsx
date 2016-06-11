@@ -2,6 +2,7 @@ import React from 'react'
 
 import './Tags.sass'
 import squish from '../../utils/string/squish'
+import removeExactWord from '../../utils/string/removeExactWord'
 
 export default React.createClass({
   propTypes: {
@@ -43,7 +44,7 @@ export default React.createClass({
     let newQuery
 
     if (this.tagIsInQuery(tag)) {
-      newQuery = query.replace(tag, '')
+      newQuery = removeExactWord(tag, query)
     } else {
       newQuery = query + ' ' + tag
     }
