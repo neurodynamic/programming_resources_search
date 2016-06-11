@@ -15,6 +15,7 @@ export default React.createClass({
           type='text'
           id='search'
           name='search'
+          autoFocus
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           />
