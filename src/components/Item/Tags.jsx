@@ -35,6 +35,8 @@ export default React.createClass({
   tagClass (tag) {
     if (this.tagIsInQuery(tag)) {
       return 'searching'
+    } else if (this.tagPrefixIsInQuery(tag)) {
+      return 'partial-match'
     } else {
       return ''
     }
@@ -52,7 +54,27 @@ export default React.createClass({
     newQuery = squish(newQuery)
     setQuery(newQuery)
   },
+  tagPrefixIsInQuery (tag) {
+    const trimmedQuery = this.props.query.trim()
+    if (trimmedQuery.length < 2) {
+      return false
+    }
+
+    return this.tagWords(tag).some(tagWord => this.anyPrefixesOf(tagWord, this.queryWords()))
+  },
   tagIsInQuery (tag) {
-    return this.props.query.split(' ').includes(tag)
+    return this.queryWords().includes(tag)
+  },
+  queryWords () {
+    return this.props.query.split(' ')
+  },
+  tagWords (tag) {
+    return tag.substring(1).split('-').concat([tag])
+  },
+  matchesAnyPrefixOf (tag) {
+    this.tagWords(tag).filter(tagWord => this.prefixMatchAny(this.queryWords()))
+  },
+  anyPrefixesOf (word, prefixArray) {
+    return prefixArray.some(prefix => word.startsWith(prefix))
   }
 })
