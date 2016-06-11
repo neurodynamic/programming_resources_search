@@ -191,6 +191,12 @@ export default [
     "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
     "tags": ["css","flexbox"]
   },
+  {
+    "name": "programming resources search codebase (react)",
+    "type": "code example",
+    "url": "https://github.com/neurodynamic/programming_resources_search",
+    "tags": ["javascript","react"]
+  },
   // {
   //   "name": "name",
   //   "type": "video",
