@@ -8,7 +8,7 @@ It is a place to search for explanations of concepts in Ruby and Javascript, and
 
 You can either:
 
-- **[Add an issue to this repo](https://github.com/neurodynamic/programming_resources_search/issues/new)** with the link information.
+- **[Add an issue to this repo](https://github.com/neurodynamic/programming_resources_search/issues/new?title=Link+suggestion)** with the link information.
 
 **OR**
 
