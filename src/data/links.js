@@ -155,6 +155,36 @@ export default [
     "url": "http://cli.learncodethehardway.org/bash_cheat_sheet.pdf",
     "tags": ["bash","console","terminal"]
   },
+  {
+    "name": "codeschool's free jquery tutorial",
+    "type": "interactive tutorial",
+    "url": "http://try.jquery.com/",
+    "tags": ["jquery","javascript"]
+  },
+  {
+    "name": "codeschool's free rails tutorial",
+    "type": "interactive tutorial",
+    "url": "http://railsforzombies.org/",
+    "tags": ["ruby","rails"]
+  },
+  {
+    "name": "codeschool's free github tutorial",
+    "type": "interactive tutorial",
+    "url": "https://try.github.io",
+    "tags": ["git","github"]
+  },
+  {
+    "name": "codeschool's free chrome devtools tutorial",
+    "type": "interactive tutorial",
+    "url": "http://discover-devtools.codeschool.com",
+    "tags": ["devtools","chrome"]
+  },
+  {
+    "name": "codeschool's free sql tutorial",
+    "type": "interactive tutorial",
+    "url": "https://www.codeschool.com/courses/try-sql",
+    "tags": ["sql","databases"]
+  },
   // {
   //   "name": "name",
   //   "type": "video",
