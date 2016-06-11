@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './Tags.sass'
+import squish from '../../utils/string/squish'
 
 export default React.createClass({
   propTypes: {
@@ -10,7 +11,7 @@ export default React.createClass({
     setQuery: React.PropTypes.func
   },
   render: function () {
-    const {name, type, url, tags} = this.props
+    const {tags} = this.props
 
     return <ul className={this.tagsClasses()}>
       {tags.sort().map(tag =>
@@ -23,15 +24,15 @@ export default React.createClass({
     </ul>
   },
   tagsClasses: function () {
-    const rootClasses = "tags list--unstyled row "
+    const rootClasses = 'tags list--unstyled row '
     if (this.props.centered) {
-      return rootClasses + "row--centered-items"
+      return rootClasses + 'row--centered-items'
     } else {
       return rootClasses
     }
   },
-  tagClass(tag) {
-    if (this.props.query.includes(tag)) {
+  tagClass (tag) {
+    if (this.tagIsInQuery(tag)) {
       return 'searching'
     } else {
       return ''
@@ -41,16 +42,16 @@ export default React.createClass({
     const { setQuery, query } = this.props
     let newQuery
 
-    if (query.includes(tag)) {
-      newQuery = query.replace(tag,'')
+    if (this.tagIsInQuery(tag)) {
+      newQuery = query.replace(tag, '')
     } else {
       newQuery = query + ' ' + tag
     }
 
-    const squishedQuery = this.squish(newQuery)
-    setQuery(squishedQuery)
+    newQuery = squish(newQuery)
+    setQuery(newQuery)
   },
-  squish: function(string) {
-    return string.replace(/\s{2,}/,' ').trim()
+  tagIsInQuery (tag) {
+    return this.props.query.split(' ').includes(tag)
   }
 })

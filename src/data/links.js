@@ -21,7 +21,7 @@ export default [
     "name": "many-to-many associations railscast",
     "type": "video",
     "url": "http://railscasts.com/episodes/47-two-many-to-many",
-    "tags": ["activerecord","associations","ruby"]
+    "tags": ["active-record","associations","ruby"]
   },
   {
     "name": "oscarotero's jquery cheatsheet",

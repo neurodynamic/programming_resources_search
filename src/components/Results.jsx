@@ -2,6 +2,7 @@ import React from 'react'
 
 import Item from './Item/Base'
 import './Results.sass'
+import flatten2d from '../utils/array/flatten2d'
 
 export default React.createClass({
   propTypes: {
@@ -63,7 +64,13 @@ export default React.createClass({
   },
   linkMatchableParts: function (link) {
     const nameParts = link.name.split(' ')
-    const hashlessTags = link.tags.map(function (tag) { return tag.replace('#','') })
-    return nameParts.concat(link.tags).concat(hashlessTags)
+    return nameParts.concat(link.tags).concat(this.wordsInTags(link))
+  },
+  wordsInTags: function (link) {
+    const wordsInEachTag = link.tags.map(this.tagToWords)
+    return flatten2d(wordsInEachTag)
+  },
+  tagToWords (tag) {
+    return tag.replace('#', '').replace('-', ' ').split(' ')
   }
 })

@@ -3,6 +3,7 @@ import React from 'react'
 import Search from './Search'
 import Results from './Results'
 import TagMenu from './TagMenu'
+import uniq from '../utils/array/uniq'
 
 export default React.createClass({
   propTypes: {
@@ -62,7 +63,7 @@ export default React.createClass({
   },
   normalizeLink (link) {
     const tagsAndType = link.tags.concat([link.type])
-    link.tags = tagsAndType.map(this.taggify)
+    link.tags = uniq(tagsAndType.map(this.taggify))
     return link
   },
   taggify (string) {

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Tags from './Item/Tags'
+import uniq from '../utils/array/uniq'
 
 export default React.createClass({
   propTypes: {
@@ -17,7 +18,7 @@ export default React.createClass({
               />
   },
   allTags: function () {
-    return this.uniq(
+    return uniq(
       this.flatten(
         this.tagListsFromLinks()
       )
@@ -28,8 +29,5 @@ export default React.createClass({
   },
   flatten: function (array) {
     return [].concat.apply([], array)
-  },
-  uniq: function (array) {
-    return Array.from(new Set(array))
   }
 })
