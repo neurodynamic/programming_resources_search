@@ -8,8 +8,8 @@ It is a place to search for explanations of concepts in Ruby and Javascript, and
 
 You can either:
 
-- **Submit a pull request** with your link information **added to [the links file](src/data/links.js)** in the appropriate format.
+- **[Add an issue to this repo](https://github.com/neurodynamic/programming_resources_search/issues/new)** with the link information.
 
 **OR**
 
-- **[Add an issue to this repo](https://github.com/neurodynamic/programming_resources_search/issues/new)** with the link information.
+- **Submit a pull request** with your link information **added to [the links file](src/data/links.js)** in the appropriate format.
