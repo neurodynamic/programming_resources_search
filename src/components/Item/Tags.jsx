@@ -55,26 +55,18 @@ export default React.createClass({
     setQuery(newQuery)
   },
   tagPrefixIsInQuery (tag) {
-    const trimmedQuery = this.props.query.trim()
-    if (trimmedQuery.length < 2) {
-      return false
-    }
-
     return this.tagWords(tag).some(tagWord => this.anyPrefixesOf(tagWord, this.queryWords()))
+  },
+  anyPrefixesOf (word, prefixArray) {
+    return prefixArray.some(prefix => word.startsWith(prefix))
   },
   tagIsInQuery (tag) {
     return this.queryWords().includes(tag)
   },
   queryWords () {
-    return this.props.query.split(' ')
+    return this.props.query.split(' ').filter(word => word.length >= 2)
   },
   tagWords (tag) {
     return tag.substring(1).split('-').concat([tag])
-  },
-  matchesAnyPrefixOf (tag) {
-    this.tagWords(tag).filter(tagWord => this.prefixMatchAny(this.queryWords()))
-  },
-  anyPrefixesOf (word, prefixArray) {
-    return prefixArray.some(prefix => word.startsWith(prefix))
   }
 })

@@ -56,7 +56,7 @@ export default React.createClass({
     const queryWords = this.props.query.split(' ')
     const linkParts = this.linkMatchableParts
     return queryWords.every(function (queryWord) {
-      return linkParts(link).find(function (potentialMatch) {
+      return linkParts(link).some(function (potentialMatch) {
         return potentialMatch.toLowerCase()
                 .startsWith(queryWord.toLowerCase())
       })
@@ -71,6 +71,6 @@ export default React.createClass({
     return flatten(wordsInEachTag)
   },
   tagToWords (tag) {
-    return tag.replace('#', '').replace('-', ' ').split(' ')
+    return tag.replace('#', '').split('-')
   }
 })
