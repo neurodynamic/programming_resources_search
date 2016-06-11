@@ -18,7 +18,7 @@ export default React.createClass({
     const links = this.normalizedLinks()
 
     return <div>
-      <div className='row row--sidelined-items'>
+      <main className='responsive-margin-container'>
         <h1>Programming Resources Search</h1>
 
         <div className='row row--centered-items row--collapsed'>
@@ -26,8 +26,6 @@ export default React.createClass({
             <strong>submit a link</strong>
           </a>
         </div>
-      </div>
-      <main className='responsive-margin-container'>
         <Search
           query={query}
           setQuery={this.setQuery}
