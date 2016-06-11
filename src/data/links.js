@@ -1,21 +1,21 @@
 export default [
   {
-    "name": "stephen's apartments mvc app",
+    "name": "apartments console mvc app",
     "type": "code example",
     "url": "https://github.com/Devbootcamp/apartments-mvc",
-    "tags": ["mvc","console mvc","ruby"]
+    "tags": ["mvc","model-view-controller","console mvc","ruby"]
   },
   {
     "name": "dbc_today mvc console gem",
     "type": "code example",
     "url": "https://github.com/Devbootcamp/dbc_today",
-    "tags": ["mvc","console mvc","ruby"]
+    "tags": ["mvc","model-view-controller","console mvc","ruby"]
   },
   // {
   //   "name": "hospital mvc example",
   //   "type": "code example",
   //   "url": "https://github.com/nyc-nighthawks-2016/ruby-flashcards-1-single-deck-challenge/blob/master/readme-assets/mvc-hospital-example.md",
-  //   "tags": ["mvc","console mvc","ruby"]
+  //   "tags": ["mvc","model-view-controller","console mvc","ruby"]
   // },
   {
     "name": "many-to-many associations railscast",
