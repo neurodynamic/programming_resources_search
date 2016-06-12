@@ -13,16 +13,23 @@ export default React.createClass({
   render: function () {
     const { query, setQuery } = this.props
     return <div className='row row--centered-items'>
-      <ul className='results list--unstyled col column--left-aligned'>
-        {this.results().map(link =>
-          <Item
-            {...link}
-            query={query}
-            setQuery={setQuery}
-            key={link.name}
-            />
-        )}
-      </ul>
+      <section className='results'>
+        <div className='row row--centered-items'>
+          <h2>Matching Resources</h2>
+        </div>
+        <div className='row row--centered-items'>
+          <ul className='listings list--unstyled col column--left-aligned'>
+            {this.results().map(link =>
+              <Item
+                {...link}
+                query={query}
+                setQuery={setQuery}
+                key={link.name}
+                />
+            )}
+          </ul>
+        </div>
+      </section>
     </div>
   },
   results: function () {

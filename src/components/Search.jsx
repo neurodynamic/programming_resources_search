@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Search.sass'
+
 export default React.createClass({
   propTypes: {
     query: React.PropTypes.string,
@@ -9,17 +11,17 @@ export default React.createClass({
     const { query, setQuery } = this.props
 
     return <div className='row row--centered-items'>
-      <fieldset>
-        <label htmlFor='search'>Search</label>
-        <input
-          type='text'
-          id='search'
-          name='search'
-          autoFocus
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          />
-      </fieldset>
+      <form className='search-form'>
+          <label htmlFor='search'>Search</label>
+          <input
+            type='text'
+            id='search'
+            name='search'
+            autoFocus
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            />
+      </form>
     </div>
   }
 })

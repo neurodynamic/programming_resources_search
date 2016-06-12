@@ -14,6 +14,7 @@ var config = getConfig({
         context.defaultTemplate(
           {
             head: '<link rel="gear icon" type="image/x-icon" href="/favicon.ico">' +
+                  "<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>" +
                   '<script src="https://use.fontawesome.com/ce69380dcd.js"></script>',
             html: '<div id="main-app"></div>',
             title: 'Programming Resources Search'

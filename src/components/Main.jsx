@@ -31,11 +31,13 @@ export default React.createClass({
           query={query}
           setQuery={this.setQuery}
           />
+        <hr className='hr--small' />
         <TagMenu
           query={query}
           links={links}
           setQuery={this.setQuery}
           />
+        <hr className='hr--small' />
         <Results
           query={query}
           links={links}

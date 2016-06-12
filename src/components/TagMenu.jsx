@@ -14,7 +14,7 @@ export default React.createClass({
   render: function () {
     return <section className='tag-menu'>
       <h2>Tags</h2>
-      <p>click or tap to select tags</p>
+      <p>click or tap tags to select them</p>
       <Tags
         tags={this.allTags()}
         centered

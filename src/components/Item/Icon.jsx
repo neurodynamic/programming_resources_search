@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Icon.sass'
+
 export default React.createClass({
   propTypes: {
     type: React.PropTypes.string
