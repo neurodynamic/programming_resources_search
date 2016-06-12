@@ -3,6 +3,7 @@ import React from 'react'
 import Tags from './Item/Tags'
 import uniq from '../utils/array/uniq'
 import flatten from '../utils/array/flatten'
+import './TagMenu.sass'
 
 export default React.createClass({
   propTypes: {
@@ -11,12 +12,16 @@ export default React.createClass({
     setQuery: React.PropTypes.func
   },
   render: function () {
-    return <Tags
-              tags={this.allTags()}
-              centered
-              query={this.props.query}
-              setQuery={this.props.setQuery}
-              />
+    return <section className='tag-menu'>
+      <h2>Tags</h2>
+      <p>click or tap to select tags</p>
+      <Tags
+        tags={this.allTags()}
+        centered
+        query={this.props.query}
+        setQuery={this.props.setQuery}
+        />
+    </section>
   },
   allTags: function () {
     return uniq(
